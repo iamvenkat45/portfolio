@@ -1,0 +1,29 @@
+<div class="contact-container">
+  <div class="container">
+    <div class="contact-header">
+      <h3>Contact</h3>
+      <p class="caption">Lets talk about how can i help you.</p>
+    </div>
+    <div class="contact-box">
+      <form [formGroup]="contactForm" (ngSubmit)="onFormSubmit()">
+        <div class="field-control">
+          <p class="label required">What should i call you</p>
+          <input type="text" value="" formControlName="name" />
+        </div>
+        <div class="field-control">
+          <p class="label required">Email</p>
+          <input type="text" value="" formControlName="email" />
+        </div>
+        <div class="field-control">
+          <p class="label required">Subject</p>
+          <input type="text" value="" formControlName="subject" />
+        </div>
+        <div class="field-control">
+          <p class="label required">Message</p>
+          <input type="text" value="" formControlName="message"/>
+        </div>
+        <input type="submit" value="Send Message" />
+      </form>
+    </div>
+  </div>
+</div>

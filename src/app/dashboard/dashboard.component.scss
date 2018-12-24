@@ -1,0 +1,54 @@
+@import 'variables.scss';
+
+.dashboard {
+  margin-top: 7%;
+  font-size: 1.1em;
+  .container {
+    width: 60%;
+  }
+  h3 {
+    font-size: 2em;
+    line-height: 50px;
+  }
+  .user-info {
+    padding: 20px 0;
+    ul li {
+      line-height: 30px;
+      opacity: 0.8;
+    }
+    .contact-text {
+      padding-top: 15px;
+    }
+  }
+  .get-in-touch {
+    padding: 20px 0;
+    p {
+      opacity: 0.8;
+    }
+    ul {
+      padding: 20px 0;
+      display: flex;
+      li{
+        opacity: 0.8;
+        text-transform: uppercase;
+        margin: 0 10px;
+        padding: 10px;
+        font-size: 14px;
+        letter-spacing: 3px;
+        &:first-child {
+          margin-left: 0;
+          padding-left: 0;
+        }
+        a {
+          cursor: pointer;
+          color: $link-color;
+          text-decoration: none;
+          &:hover {
+            color: $link-color;
+            border-bottom: 2px dashed $link-color;
+          }
+        }
+      }
+    }
+  }
+}
