@@ -2,6 +2,7 @@
 
 @import "reset.scss";
 @import "variables.scss";
+@import "responsive.scss";
 
 body {
   margin: 0;
@@ -42,4 +43,8 @@ body {
 .required:after {
   content: " *";
   color: $red-color;
+}
+
+::selection {
+  background: #00bfff78;
 }

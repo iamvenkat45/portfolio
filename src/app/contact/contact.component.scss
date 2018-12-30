@@ -1,5 +1,6 @@
 @import 'variables.scss';
 .contact-container {
+  padding-bottom: 30px;
   .contact-header {
     text-align: center;
     margin-bottom: 20px;
@@ -31,5 +32,12 @@
         border-bottom: 2px dashed $link-color;
       }
     }
+  }
+}
+
+@media (max-width: 820px) {
+  .contact-container .contact-box{
+    width: 90%;
+    padding: 5%;
   }
 }

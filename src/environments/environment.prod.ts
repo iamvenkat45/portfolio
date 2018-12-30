@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  apiUrl: 'https://fathomless-spire-66290.herokuapp.com'
 };

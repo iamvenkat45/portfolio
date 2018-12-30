@@ -3,6 +3,7 @@ import { Routes, RouterModule } from "@angular/router";
 
 import { ContactComponent } from "./contact/contact.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
+import { ExperienceComponent } from './experience/experience.component';
 
 const routes: Routes = [
   {
@@ -17,11 +18,15 @@ const routes: Routes = [
   {
     path: 'contact',
     component: ContactComponent
+  },
+  {
+    path: 'experience',
+    component: ExperienceComponent
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
