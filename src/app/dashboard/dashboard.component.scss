@@ -24,6 +24,7 @@
     padding: 20px 0;
     p {
       opacity: 0.8;
+      line-height: 30px;
     }
     ul {
       padding: 20px 0;
@@ -49,6 +50,26 @@
           }
         }
       }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .dashboard {
+    .container {
+      width: 80%;
+    }
+    h3 {
+      font-size: 1.4em;
+      line-height: 30px;
+    }
+    .user-info {
+      ul li {
+        padding-bottom: 15px;
+      }
+    }
+    .get-in-touch {
+      padding-top: 0px;
     }
   }
 }

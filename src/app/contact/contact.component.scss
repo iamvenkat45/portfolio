@@ -28,10 +28,19 @@
       color: $link-color;
       outline: none;
       padding: 5px;
+      background: none;
       &:hover {
         border-bottom: 2px dashed $link-color;
       }
     }
+  }
+  .success-txt {
+    width: 80%;
+    color: $link-color;
+    padding: 15px 0;
+    text-align: center;
+    margin: 0 auto;
+    transition: all 1s;
   }
 }
 

@@ -45,6 +45,12 @@ body {
   color: $red-color;
 }
 
+.error-txt {
+  color: $red-color;
+  font-size: 13px;
+  padding: 3px 0;
+}
+
 ::selection {
   background: #00bfff78;
 }

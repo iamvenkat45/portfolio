@@ -6,23 +6,28 @@
     </div>
     <div class="contact-box">
       <form [formGroup]="contactForm" (ngSubmit)="onFormSubmit()">
+          <p class="success-txt" *ngIf="displaySuccessMessage">Thanks for contacting, will reply back to you as soon as possible!! Have a great day</p>
         <div class="field-control">
           <p class="label required">What should i call you</p>
-          <input type="text" value="" formControlName="name" />
+          <input type="text" id="name" value="" formControlName="name" />
+          <p class="error-txt" *ngIf="form.name.touched && form.name.invalid">Name is a required field</p>
         </div>
         <div class="field-control">
           <p class="label required">Email</p>
-          <input type="text" value="" formControlName="email" />
+          <input type="email" id="email" value="" formControlName="email" />
+          <p class="error-txt" *ngIf="form.email.touched && form.email.invalid">Email is a required field</p>
         </div>
         <div class="field-control">
           <p class="label required">Subject</p>
-          <input type="text" value="" formControlName="subject" />
+          <input type="text" id="subject" value="" formControlName="subject" />
+          <p class="error-txt" *ngIf="form.subject.touched && form.subject.invalid">Subject is a required field</p>
         </div>
         <div class="field-control">
           <p class="label required">Message</p>
-          <input type="text" value="" formControlName="message"/>
+          <input type="text" id="message" value="" formControlName="message"/>
+          <p class="error-txt" *ngIf="form.message.touched && form.message.invalid">Message is a required field</p>
         </div>
-        <input type="submit" value="Send Message" />
+        <input type="submit" value="Send Message" [disabled]="contactForm.invalid" />
       </form>
     </div>
   </div>

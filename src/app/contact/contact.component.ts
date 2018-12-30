@@ -10,6 +10,7 @@ import { ContactService } from "./contact.service";
 })
 export class ContactComponent implements OnInit {
   contactForm;
+  displaySuccessMessage: boolean;
   constructor(private contactService: ContactService) {}
 
   ngOnInit() {
@@ -21,11 +22,16 @@ export class ContactComponent implements OnInit {
     });
   }
 
+  get form() { return this.contactForm.controls; }
+
   onFormSubmit() {
     if (this.contactForm.valid) {
       this.contactService.sendEmail(this.contactForm.value).subscribe(data => {
         this.contactForm.reset();
-        console.log(data);
+        this.displaySuccessMessage = true;
+        setTimeout(()=> {
+          this.displaySuccessMessage = false;
+        }, 1000)
       });
     }
   }
